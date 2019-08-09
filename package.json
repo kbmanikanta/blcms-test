@@ -1,0 +1,19 @@
+{
+  "name": "blacklight-develop",
+  "version": "0.2.0",
+  "description": "Blacklight module to support component development",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Entropy Multimedia, Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "multiparty": "^4.1.2",
+    "rimraf": "^2.5.4",
+    "sling-middleware": "^0.1.2"
+  }
+}

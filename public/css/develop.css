@@ -1,0 +1,47 @@
+
+/**** DEVELOP CODE CSS ********************/
+body.develop-code{
+	overflow: hidden;
+}
+
+
+
+body.develop-code .row .tab-body{
+	background-color:#eee; 
+	margin-left:11px; 
+	height: calc(100vh - 2.6rem);
+	width: calc(100% - 16px);
+	padding:0;
+}
+
+
+body.develop-code .CodeMirror, body.develop-code textarea{
+	height: calc(100vh - 6.6rem);
+	margin:  0;  /*.8rem;*/
+	background-color: #f6f4e5;
+	border: 1px solid #ddd;
+	border-top:1px solid #ddd;
+
+}
+
+body.develop-code .btn{
+	margin:8px;
+}
+
+
+.file-path{
+	position:relative;
+	float:left;
+	top:1rem;
+	left:1rem;
+	font-family: monospace;
+	color: #b71c1c;
+}
+
+.tab .material-icons{
+	font-size:1.4rem;
+	position:relative;
+	top:5px;
+	left:-16px;
+}
+

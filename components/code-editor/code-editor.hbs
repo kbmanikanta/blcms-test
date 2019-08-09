@@ -1,0 +1,31 @@
+{{#> page.layout page-class="develop-code darker-tabs"}}
+
+	 <div class="row code-container" data-rtype="{{@root.rtype}}">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s2"><a href="#overview">Overview</a></li>
+        {{#each @root.files}}
+	        <li class="tab col s2">
+	        	<a {{#if @first}}class="active"{{/if}} href="#tab-{{title}}" id="tab-{{title}}-button">
+	        		<i class="material-icons">{{#if contents}}check{{else}}{{/if}}</i>{{prettyname title}}
+	        	</a>
+	        </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div id="overview" class="col s12 tab-body">Overview of component (CSS classes, etc)</div>
+
+
+	{{#each @root.files}}
+		<div id="tab-{{title}}"  data-mode="{{mode}}" {{#unless contents}}data-default-value="{{default}}"{{/unless}}class="col s12 tab-body">
+			<textarea data-path="{{path}}" data-partial-path="{{partialPath}}" data-hash="{{hash}}" >{{{contents}}}</textarea>
+			<div class="file-path"><b>{{@root.rtype}}</b> / {{path}}</div>
+			<a class="save-code waves-effect waves-light btn right red darken-2">Save</a>
+		</div>
+	{{/each}}
+
+	</div>
+
+
+{{/page.layout}}

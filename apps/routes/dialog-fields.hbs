@@ -1,0 +1,27 @@
+<div class="container">
+<div class="row">
+<div class="col-xs-9">
+{{#each allFields}}
+	{{#if componentTitle}}
+		{{#unless @first}}</ul>{{/unless}}
+		<ul class="collection with-header">
+        <li class="collection-header" style="background-color:#ddd;"><h5>{{componentTitle}}</h5></li>
+	{{else}}
+			<li class="collection-item avatar">
+				{{#if exists}}
+					<i class="material-icons circle red darken-4">done</i>
+				{{else}}
+					<i class="material-icons circle green bl-add" data-path="{{path}}" data-content='{{as-json widget}}'>add</i>
+				{{/if}}
+				<b>{{widget.fieldLabel}}</b><br/>
+				{{path}}
+				
+			</li>
+	{{/if}}
+{{else}}
+	No fields found.
+{{/each}}
+	</ul>
+</div>
+</div>
+</div>
